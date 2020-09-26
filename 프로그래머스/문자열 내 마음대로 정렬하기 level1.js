@@ -1,19 +1,23 @@
 function solution(strings, n) {
     var answer = [];
-    for(let i = 0; i<strings.length; i++){
-        for(let j = i+1; j<strings.length; j++){
-            if(strings[i][n] > strings[j][n]){
-                [strings[i], strings[j]] = [strings[j], strings[i]];
-            }
-            if(strings[i][n] === strings[j][n]){
-                if(strings[i] > strings[j]){
-                    [strings[i], strings[j]] = [strings[j], strings[i]];
+
+    for (let i = 0; i < strings.length; i++) {
+        for (let j = i + 1; j < strings.length; j++) {
+            if (strings[i][n] > strings[j][n]) {
+                let change = strings[i]
+                strings[i] = strings[j]
+                strings[j] = change
+            } else if (strings[i][n] === strings[j][n]) {
+                if (strings[i] > strings[j]) {
+                    let change = strings[i]
+                    strings[i] = strings[j]
+                    strings[j] = change
                 }
             }
         }
     }
-    answer = strings;
-    return answer;
+
+    return strings;
 }
 
 //best 답안
