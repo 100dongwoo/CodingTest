@@ -6,7 +6,7 @@ function solution(n) {
         if(i%2===1)
             answer+='수'
         else
-            answer+='박'
+            answer+='r박'
     }
     return answer;
 }
