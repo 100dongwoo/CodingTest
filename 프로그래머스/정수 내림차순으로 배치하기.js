@@ -10,4 +10,3 @@ function solution(n) {
 }
 ///    n=n.replace(/,/g,''); 전체 전부 다 바뀐다
 
-/
