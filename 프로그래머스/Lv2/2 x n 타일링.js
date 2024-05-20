@@ -1,4 +1,4 @@
-// test2
+// test 2
 function solution(n) {
   let list = [1, 2];
   for (let i = 2; i <= n; i++) {
